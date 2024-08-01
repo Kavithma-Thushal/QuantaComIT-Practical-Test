@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="quantacomit_practical_test@localhost" uuid="11c8866b-c633-4629-ba6a-93abc16022db">
+    <data-source source="LOCAL" name="quantacomit_practical_test@localhost" uuid="3013b1f5-ccf2-4f9b-9bca-63dd5508da39">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
