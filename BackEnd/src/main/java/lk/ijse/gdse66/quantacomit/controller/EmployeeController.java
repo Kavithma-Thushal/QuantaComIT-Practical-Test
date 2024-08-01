@@ -17,6 +17,7 @@ import java.util.List;
  * @project : QuantaComIT-Practical-Test
  * @since : 12:37 PM - 8/1/2024
  **/
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1/employee")
 public class EmployeeController {
