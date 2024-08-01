@@ -1,4 +1,4 @@
-package lk.ijse.gdse66.quantacomitspringbootpracticaltest;
+package lk.ijse.gdse66.quantacomitpracticaltest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
