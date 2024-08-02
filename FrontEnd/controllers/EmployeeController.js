@@ -135,9 +135,24 @@ function loadAllEmployees() {
                 </tr>`;
                 $("#employeeTable").append(row);
             });
+            tableListener();
         },
         error: function (error) {
             console.log("Load All Employees Error...!");
         }
+    });
+}
+
+function tableListener() {
+    $("#employeeTable>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let address = $(this).children().eq(2).text();
+        let salary = $(this).children().eq(3).text();
+
+        $("#txtEmployeeId").val(id);
+        $("#txtEmployeeName").val(name);
+        $("#txtEmployeeAddress").val(address);
+        $("#txtEmployeeSalary").val(salary);
     });
 }
