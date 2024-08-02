@@ -1,5 +1,10 @@
 let baseUrl = "http://localhost:8080/api/v1/employee";
 const token = localStorage.getItem('token');
+const role = localStorage.getItem('role');
+
+if (role === 'USER') {
+    $("#btnDeleteEmployee").hide();
+}
 
 loadAllEmployees();
 
