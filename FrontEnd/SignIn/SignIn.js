@@ -15,7 +15,7 @@ $('#signinForm').submit(function (event) {
             alert('SignIn Successfully...!');
             localStorage.setItem('token', resp.token);
             localStorage.setItem('role', resp.role);
-            window.location.href = '../index.html';
+            window.location.href = '../employee/Employee.html';
         },
         error: function (xhr) {
             alert('SigniIn Failed : ' + xhr.responseText);
