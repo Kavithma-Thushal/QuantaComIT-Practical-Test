@@ -5,10 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c38240a-07ce-43dd-a91c-32732495f3cf" name="Changes" comment="BackEnd Completed">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/controllers/EmployeeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/entity/enums/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/repo/UserRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/security/auth/request/SignIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/security/auth/request/SignUp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/security/auth/response/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/security/config/JwtConfigFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/AuthenticationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/impl/AuthenticationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/impl/JwtServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/SignIn/SignIn.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/SignIn/SignIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/SignUp/SignUp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013b1f5-ccf2-4f9b-9bca-63dd5508da39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3013b1f5-ccf2-4f9b-9bca-63dd5508da39.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/util/ResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/lk/ijse/gdse66/quantacomit/util/ResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/quantacomit/util/ResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/target/classes/lk/ijse/gdse66/quantacomit/util/ResponseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/controllers/EmployeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/controllers/EmployeeController.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="HTML File" />
       </list>
     </option>
@@ -68,6 +94,14 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\FrontEnd" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit" />
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit\service\impl" />
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit\service" />
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit\entity" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lk.ijse.gdse66.quantacomit.repo" />
+      <recent name="lk.ijse.gdse66.quantacomit.dto" />
+      <recent name="lk.ijse.gdse66.quantacomit.controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -86,6 +120,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.WebApplication" />
         <item itemvalue="Spring Boot.WebApplication" />
       </list>
     </recent_temporary>
@@ -110,6 +145,8 @@
       <workItem from="1722497964797" duration="99000" />
       <workItem from="1722498854918" duration="2393000" />
       <workItem from="1722503445609" duration="2196000" />
+      <workItem from="1722524693414" duration="111000" />
+      <workItem from="1722600073605" duration="1411000" />
     </task>
     <task id="LOCAL-00001" summary="Structure Refactored">
       <option name="closed" value="true" />

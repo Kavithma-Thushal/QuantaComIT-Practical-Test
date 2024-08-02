@@ -1,4 +1,5 @@
 let baseUrl = "http://localhost:8080/api/v1/employee";
+const token = localStorage.getItem('token');
 
 loadAllEmployees();
 
@@ -20,6 +21,9 @@ $("#btnSaveEmployee").click(function () {
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify(employeeObj),
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
         success: function (res) {
             loadAllEmployees();
             alert("Employee Saved Successfully...!");
@@ -34,6 +38,9 @@ $("#btnSearchEmployee").click(function () {
     $.ajax({
         url: baseUrl + "/searchEmployee/" + searchEmpId,
         method: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
         success: function (res) {
             $("#txtEmployeeName").val(res.name);
             $("#txtEmployeeAddress").val(res.address);
@@ -64,6 +71,9 @@ $("#btnUpdateEmployee").click(function () {
         method: "PUT",
         contentType: "application/json",
         data: JSON.stringify(employeeObj),
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
         success: function (res) {
             loadAllEmployees();
             alert("Employee Updated Successfully...!");
@@ -80,6 +90,9 @@ $("#btnDeleteEmployee").click(function () {
     $.ajax({
         url: baseUrl + "/deleteEmployee/" + deletedEmpId,
         method: "DELETE",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
         success: function (res) {
             loadAllEmployees();
             alert("Employee Deleted Successfully...!");
@@ -99,6 +112,9 @@ function loadAllEmployees() {
     $.ajax({
         url: baseUrl + "/loadAllEmployees",
         method: "GET",
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
         success: function (res) {
             res.forEach(employee => {
                 let id = employee.id;
