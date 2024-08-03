@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c38240a-07ce-43dd-a91c-32732495f3cf" name="Changes" comment="README.md Updated">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013b1f5-ccf2-4f9b-9bca-63dd5508da39.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3013b1f5-ccf2-4f9b-9bca-63dd5508da39.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/employee/EmployeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/employee/EmployeeController.js" afterDir="false" />
+    <list default="true" id="4c38240a-07ce-43dd-a91c-32732495f3cf" name="Changes" comment="README.md Updated 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;Spring Boot.WebApplication.executor&quot;: &quot;Run&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/3rd Sem Repo/QuantaComIT/QuantaComIT-Practical-Test/BackEnd/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IJSE/Workspace/3rd Sem Repo/QuantaComIT/QuantaComIT-Practical-Test/ss&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -69,11 +68,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\ss" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\resources" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\FrontEnd" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit" />
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit\service\impl" />
-      <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\BackEnd\src\main\java\lk\ijse\gdse66\quantacomit\service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IJSE\Workspace\3rd Sem Repo\QuantaComIT\QuantaComIT-Practical-Test\FrontEnd\employee" />
@@ -137,6 +136,7 @@
       <workItem from="1722616186247" duration="1437000" />
       <workItem from="1722649412886" duration="2631000" />
       <workItem from="1722653422631" duration="5008000" />
+      <workItem from="1722669440340" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="Structure Refactored">
       <option name="closed" value="true" />
@@ -194,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722653342916</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="README.md Updated 2">
+      <option name="closed" value="true" />
+      <created>1722669295716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1722669295716</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +217,7 @@
     <MESSAGE value="Profile Picture Uploaded Successfully" />
     <MESSAGE value="Profile Picture Downloaded Successfully" />
     <MESSAGE value="README.md Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated" />
+    <MESSAGE value="README.md Updated 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md Updated 2" />
   </component>
 </project>

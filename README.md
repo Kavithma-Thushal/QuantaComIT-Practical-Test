@@ -28,8 +28,6 @@ This project implements a secure employee register system with user authenticati
 ✅Employee CRUD Operations: Create, Read, Update, and Delete employee data (delete restricted to admins).</br>
 ✅Profile Picture Management: Upload profile pictures for employees (stored securely in a designated folder).</br>
 ✅Downloadable Profile Picture: Retrieve uploaded profile pictures by employee ID.</br>
-✅Automatic Age Calculation: Calculates and updates an employee's "current_age_in_days" column daily using a scheduled
-cron job (birthday required).</br>
 ✅Jasper Reports Integration: Generates a downloadable PDF report listing all employees.</br>
 
 ## Home
