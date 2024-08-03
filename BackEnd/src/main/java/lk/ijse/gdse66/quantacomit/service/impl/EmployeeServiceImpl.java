@@ -8,7 +8,12 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,6 +31,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    private static final String UPLOAD_DIR = "uploads/";
 
     @Override
     public boolean saveEmployee(EmployeeDTO employeeDTO) {
@@ -70,5 +77,22 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<EmployeeDTO> loadAllEmployees() {
         List<EmployeeEntity> customers = employeeRepo.findAll();
         return customers.stream().map(customer -> modelMapper.map(customer, EmployeeDTO.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean uploadProfilePicture(String id, MultipartFile file) {
+        if (employeeRepo.existsById(id)) {
+            String fileName = id + "_" + file.getOriginalFilename();
+            Path filePath = Paths.get(UPLOAD_DIR + fileName);
+            try {
+                Files.createDirectories(filePath.getParent());
+                Files.write(filePath, file.getBytes());
+                return true;
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to upload profile picture : " + e.getMessage(), e);
+            }
+        } else {
+            return false;
+        }
     }
 }

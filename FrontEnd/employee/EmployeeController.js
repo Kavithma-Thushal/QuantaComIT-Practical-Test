@@ -156,3 +156,28 @@ function tableListener() {
         $("#txtEmployeeSalary").val(salary);
     });
 }
+
+$("#btnUploadProfilePicture").click(function () {
+    let empId = $("#txtEmployeeId").val();
+    let file = $("#fileProfilePicture")[0].files[0];
+
+    let formData = new FormData();
+    formData.append("file", file);
+
+    $.ajax({
+        url: baseUrl + "/uploadProfilePicture/" + empId,
+        method: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
+        success: function (res) {
+            alert("Profile Picture Uploaded Successfully...!");
+        },
+        error: function (error) {
+            alert("Failed to upload the profile picture.");
+        }
+    });
+});

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -99,6 +100,21 @@ public class EmployeeController {
         } else {
             String errorResponse = "Employees Not Found...!";
             logger.error(errorResponse);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
+        }
+    }
+
+    @PostMapping("/uploadProfilePicture/{id}")
+    public ResponseEntity<String> uploadProfilePicture(@PathVariable String id, @RequestParam("file") MultipartFile file) {
+
+        boolean isUploaded = employeeService.uploadProfilePicture(id, file);
+        if (isUploaded) {
+            String successResponse = "Profile Picture Uploaded Successfully...!";
+            logger.info(successResponse);
+            return ResponseEntity.status(HttpStatus.OK).body(successResponse);
+        } else {
+            String errorResponse = "Failed to upload the profile picture. Employee not found...!";
+            logger.warn(errorResponse);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
         }
     }
