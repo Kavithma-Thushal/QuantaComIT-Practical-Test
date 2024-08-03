@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn {
+    border-radius: 0.25rem;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.table {
+    background-color: #ffffff;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
