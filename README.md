@@ -18,7 +18,7 @@ This project implements a secure employee register system with user authenticati
 ✅SpringBoot</br>
 ✅JWT</br>
 ✅MySQL</br>
-✅SpringBoot Data JPA</br>
+✅Jasper Report</br>
 
 ## Features
 
