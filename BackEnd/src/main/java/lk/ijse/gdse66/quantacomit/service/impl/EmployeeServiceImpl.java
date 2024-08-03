@@ -4,17 +4,26 @@ import lk.ijse.gdse66.quantacomit.dto.EmployeeDTO;
 import lk.ijse.gdse66.quantacomit.entity.EmployeeEntity;
 import lk.ijse.gdse66.quantacomit.repo.EmployeeRepo;
 import lk.ijse.gdse66.quantacomit.service.EmployeeService;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
@@ -75,8 +84,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<EmployeeDTO> loadAllEmployees() {
-        List<EmployeeEntity> customers = employeeRepo.findAll();
-        return customers.stream().map(customer -> modelMapper.map(customer, EmployeeDTO.class)).collect(Collectors.toList());
+        List<EmployeeEntity> employeeEntities = employeeRepo.findAll();
+        return employeeEntities.stream()
+                .map(employeeEntity -> modelMapper.map(employeeEntity, EmployeeDTO.class))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -116,6 +127,37 @@ public class EmployeeServiceImpl implements EmployeeService {
             }
         } else {
             return null;
+        }
+    }
+
+    @Override
+    public byte[] exportEmployeeReport() {
+        try {
+            // Load employee data
+            List<EmployeeDTO> employees = loadAllEmployees();
+
+            // Load the report file from classpath
+            Resource resource = new ClassPathResource("employees.jrxml");
+            File reportFile = resource.getFile();
+
+            // Compile the Jasper report from .jrxml to .jasper
+            String jasperReportPath = reportFile.getAbsolutePath().replace(".jrxml", ".jasper");
+            JasperCompileManager.compileReportToFile(reportFile.getAbsolutePath(), jasperReportPath);
+
+            // Load the compiled Jasper report
+            JasperPrint jasperPrint = JasperFillManager.fillReport(
+                    jasperReportPath,
+                    new HashMap<>(),
+                    new JRBeanCollectionDataSource(employees));
+
+            // Export the report to PDF format
+            try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                JasperExportManager.exportReportToPdfStream(jasperPrint, baos);
+                return baos.toByteArray();
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate PDF report: " + e.getMessage(), e);
         }
     }
 }

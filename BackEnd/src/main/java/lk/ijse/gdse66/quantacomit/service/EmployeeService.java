@@ -25,4 +25,6 @@ public interface EmployeeService {
     boolean uploadProfilePicture(String id, MultipartFile file);
 
     byte[] downloadProfilePicture(String id);
+
+    byte[] exportEmployeeReport();
 }

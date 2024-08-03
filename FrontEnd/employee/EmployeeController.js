@@ -211,3 +211,25 @@ $("#btnDownloadProfilePicture").click(function () {
         }
     });
 });
+
+$("#btnDownloadEmployeeReport").click(function () {
+    $.ajax({
+        url: baseUrl + "/downloadEmployeeReport",
+        method: "GET",
+        xhrFields: {
+            responseType: 'blob' // Important for handling binary data
+        },
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
+        success: function (data) {
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(data);
+            link.download = 'employees.pdf';
+            link.click();
+        },
+        error: function (error) {
+            alert("Error downloading report!");
+        }
+    });
+});

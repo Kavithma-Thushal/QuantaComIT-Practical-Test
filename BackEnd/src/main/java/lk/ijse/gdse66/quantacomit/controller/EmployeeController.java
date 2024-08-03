@@ -131,4 +131,19 @@ public class EmployeeController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
         }
     }
+
+    @GetMapping("/downloadEmployeeReport")
+    public ResponseEntity<byte[]> downloadEmployeeReport() {
+        try {
+            byte[] data = employeeService.exportEmployeeReport();
+            return ResponseEntity.ok()
+                    .header("Content-Disposition", "attachment; filename=employees.pdf")
+                    .header("Content-Type", "application/pdf")
+                    .body(data);
+        } catch (Exception e) {
+            String errorResponse = "Failed to generate the report: " + e.getMessage();
+            logger.error(errorResponse);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
+        }
+    }
 }
