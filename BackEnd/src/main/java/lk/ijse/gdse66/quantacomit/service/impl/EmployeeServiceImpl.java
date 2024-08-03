@@ -95,4 +95,27 @@ public class EmployeeServiceImpl implements EmployeeService {
             return false;
         }
     }
+
+    @Override
+    public byte[] downloadProfilePicture(String id) {
+        if (employeeRepo.existsById(id)) {
+            String fileName = id + "_";
+            try {
+                Path dir = Paths.get(UPLOAD_DIR);
+                Path matchingFile = Files.list(dir)
+                        .filter(file -> file.getFileName().toString().startsWith(fileName))
+                        .findFirst()
+                        .orElse(null);
+                if (matchingFile != null) {
+                    return Files.readAllBytes(matchingFile);
+                } else {
+                    return null;
+                }
+            } catch (IOException e) {
+                throw new RuntimeException("Failed to download profile picture : " + e.getMessage(), e);
+            }
+        } else {
+            return null;
+        }
+    }
 }

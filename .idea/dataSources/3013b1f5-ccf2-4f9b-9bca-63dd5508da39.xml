@@ -1035,7 +1035,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="301" parent="1" name="quantacomit_practical_test">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-08-03.01:37:08</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-08-03.02:20:46</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="302" parent="1" name="mysql.infoschema">
@@ -1057,83 +1057,5 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="306" parent="301" name="employee">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <table id="307" parent="301" name="user">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="308" parent="306" name="id">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="309" parent="306" name="address">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="310" parent="306" name="name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="311" parent="306" name="salary">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <index id="312" parent="306" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="313" parent="306" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="314" parent="307" name="id">
-      <DasType>varchar(255)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="315" parent="307" name="email">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="316" parent="307" name="first_name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>3</Position>
-    </column>
-    <column id="317" parent="307" name="last_name">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>4</Position>
-    </column>
-    <column id="318" parent="307" name="password">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>5</Position>
-    </column>
-    <column id="319" parent="307" name="role">
-      <DasType>enum(&apos;ADMIN&apos;, &apos;USER&apos;)|0e</DasType>
-      <Position>6</Position>
-    </column>
-    <index id="320" parent="307" name="PRIMARY">
-      <ColNames>id</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="321" parent="307" name="UKob8kqyqqgmefl0aco34akdtpe">
-      <ColNames>email</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="322" parent="307" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="323" parent="307" name="UKob8kqyqqgmefl0aco34akdtpe">
-      <UnderlyingIndexName>UKob8kqyqqgmefl0aco34akdtpe</UnderlyingIndexName>
-    </key>
   </database-model>
 </dataSource>

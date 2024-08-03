@@ -118,4 +118,17 @@ public class EmployeeController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
         }
     }
+
+    @GetMapping("/downloadProfilePicture/{id}")
+    public ResponseEntity<?> downloadProfilePicture(@PathVariable String id) {
+
+        byte[] imageData = employeeService.downloadProfilePicture(id);
+        if (imageData != null) {
+            return ResponseEntity.ok().header("Content-Type", "image/jpeg").body(imageData);
+        } else {
+            String errorResponse = "Profile picture not found or employee does not exist.";
+            logger.error(errorResponse);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
+        }
+    }
 }

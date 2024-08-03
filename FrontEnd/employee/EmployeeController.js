@@ -181,3 +181,33 @@ $("#btnUploadProfilePicture").click(function () {
         }
     });
 });
+
+$("#btnDownloadProfilePicture").click(function () {
+    let empId = $("#txtEmployeeId").val();
+
+    $.ajax({
+        url: baseUrl + "/downloadProfilePicture/" + empId,
+        method: "GET",
+        xhrFields: {
+            responseType: 'blob'
+        },
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader('Authorization', 'Bearer ' + token);
+        },
+        success: function (data) {
+            let blob = new Blob([data], {type: 'image/jpeg'});
+            let url = window.URL.createObjectURL(blob);
+            let a = document.createElement('a');
+            a.href = url;
+            a.download = empId + "_profile_picture.jpg";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            alert("Profile Picture Downloaded Successfully...!");
+        },
+        error: function (error) {
+            alert("Failed to download the profile picture.");
+        }
+    });
+});

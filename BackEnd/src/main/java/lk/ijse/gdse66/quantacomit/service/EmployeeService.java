@@ -23,4 +23,6 @@ public interface EmployeeService {
     List<EmployeeDTO> loadAllEmployees();
 
     boolean uploadProfilePicture(String id, MultipartFile file);
+
+    byte[] downloadProfilePicture(String id);
 }
