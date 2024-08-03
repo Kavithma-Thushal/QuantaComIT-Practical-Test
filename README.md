@@ -32,6 +32,10 @@ This project implements a secure employee register system with user authenticati
 cron job (birthday required).</br>
 ✅Jasper Reports Integration: Generates a downloadable PDF report listing all employees.</br>
 
+## Home
+
+<img src="ss/Home.png">
+
 ## SignUp
 
 <img src="ss/SignUp.png">
@@ -42,7 +46,15 @@ cron job (birthday required).</br>
 
 ## Employee Management
 
-<img src="ss/Employee.png">
+<img src="ss/EmployeeManagement.png">
+
+## Employee Report
+
+<img src="ss/EmployeeReport.png">
+
+## Codes
+
+<img src="ss/Codes.png">
 
 ## Version
 

@@ -7,6 +7,7 @@ if (role === 'USER') {
 }
 
 loadAllEmployees();
+$("#btnUploadProfilePicture").prop('disabled', true);
 
 $("#btnSaveEmployee").click(function () {
     let empId = $("#txtEmployeeId").val();
@@ -31,6 +32,7 @@ $("#btnSaveEmployee").click(function () {
         },
         success: function (res) {
             loadAllEmployees();
+            $("#btnUploadProfilePicture").prop('disabled', false);
             alert("Employee Saved Successfully...!");
         }, error: function (error) {
             alert("Employee Saved Error...!");
